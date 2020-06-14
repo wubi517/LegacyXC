@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:name="@android:name/background"
+        android:drawable="@drawable/img_seekbar_full"/>
+    <item android:name="@android:name/secondaryProgress">
+        <scale
+            android:drawable="@drawable/img_seekbar_full"
+            android:scaleWidth="100%" />
+    </item>
+    <item android:name="@android:name/progress">
+        <scale
+            android:drawable="@drawable/img_seekbar_bg"
+            android:scaleWidth="100%" />
+    </item>
+</layer-list>

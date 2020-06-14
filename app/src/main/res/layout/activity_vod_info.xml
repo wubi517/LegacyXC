@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_black"
+    tools:context=".activity.vod.VodInfo">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:focusable="false"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:id="@+id/image"
+        android:background="#10ffffff"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/fav_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/star_white"
+                android:tint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/button2"
+                app:layout_constraintStart_toStartOf="@+id/button2"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/button2"/>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:focusable="false"
+                android:textColor="@color/lb_tv_white"
+                android:textSize="24sp"
+                android:layout_marginEnd="@dimen/size_16dp"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:textColor="#969696"
+                app:layout_constraintEnd_toEndOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:lineSpacingExtra="4sp"
+                android:textColor="#cccccc"
+                app:layout_constraintEnd_toEndOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/watch_trailer"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="32dp"
+                android:focusable="true"
+                android:background="@drawable/btn_drawable_green"
+                app:layout_constraintTop_toBottomOf="@+id/textView10"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/watch_movie"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"
+                android:focusable="true"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_drawable_green"
+                app:layout_constraintEnd_toEndOf="@+id/button2"
+                app:layout_constraintStart_toStartOf="@+id/button2"
+                app:layout_constraintTop_toBottomOf="@+id/button2"
+                android:layout_marginTop="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/add_to_favorite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button4"
+                android:focusable="true"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_drawable_green"
+                app:layout_constraintEnd_toEndOf="@+id/button2"
+                app:layout_constraintStart_toStartOf="@+id/button2"
+                app:layout_constraintTop_toBottomOf="@+id/button3"
+                android:layout_marginTop="8dp"
+                app:layout_constraintHorizontal_bias="0.0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

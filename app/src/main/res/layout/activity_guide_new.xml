@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black"
+    tools:context=".activity.catchup.GuideNewActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/constraintLayout">
+        <FrameLayout android:layout_width="280dp"
+            android:background="@android:color/black"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="12dp"
+            android:id="@+id/frameLayout3"/>
+        <TextView
+            android:text="07:00 AM - 08:00AM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:textSize="12sp" android:textColor="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@+id/current_channel_image" android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"/>
+        <ImageView
+            android:id="@+id/current_channel_image" android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+        <TextView
+            android:text="Lisa Omeilan's What Would Beyonce Do?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4" android:layout_marginTop="4dp"
+            android:textColor="@color/lb_tv_white" android:textSize="18sp"/>
+        <TextView
+            android:text="Tv Stand up debut by the comedian who shot to fame in a one of the most successful debut standup shows ..."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="@+id/textView7" android:layout_marginTop="2dp"
+            android:textSize="14sp" android:textColor="#cccccc" android:layout_marginEnd="60dp"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout3" android:lineSpacingExtra="2sp"
+            android:fontFamily="@font/montserrat"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dateRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/epg_recyclerview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/dateRecyclerView"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

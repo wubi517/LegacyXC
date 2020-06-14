@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="@color/light_black"
+    tools:context=".activity.vod.VodInFoActivity">
+    <LinearLayout
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ly_back"
+            android:layout_marginTop="50sp"
+            android:layout_marginBottom="50sp"
+            android:background="@drawable/back_button_bg"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingRight="13dp"
+            android:paddingLeft="15sp"
+            android:paddingEnd="13dp"
+            android:paddingStart="10sp"
+            android:orientation="vertical"
+            android:layout_width="0sp"
+            android:layout_weight="0.6"
+            android:layout_height="match_parent">
+            <ImageView
+                android:visibility="invisible"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:background="@color/trans_parent"
+                android:paddingTop="100dp"
+                android:paddingBottom="70sp"
+                android:id="@+id/btn_back"
+                android:src="@drawable/backbg"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight="1">
+            </ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="12"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="3sp"
+                    android:layout_marginLeft="10sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VideoClub / "
+                        android:textColor="@color/welcome_color"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/txt_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INFORMATION ABOUT THE MOVIE"
+                        android:textColor="@color/welcome_color"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginRight="20sp"
+                    android:id="@+id/txt_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:text="19:30"
+                    android:textColor="@color/welcome_color"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:padding="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight="6"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/ly_left"
+                    android:orientation="vertical"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20sp"
+                    android:layout_weight="2">
+                    <TextView
+                        android:id="@+id/txt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Sarah Brightman - Live Fort Lauderdale"
+                        android:textSize="20sp"/>
+                    <ScrollView
+                        style="@style/scrollbar_shape_style"
+                        android:layout_marginTop="10sp"
+                        android:paddingRight="10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Country: "
+                                    android:textColor="@color/welcome_color"
+                                    android:textSize="18sp"/>
+                                <TextView
+                                    android:id="@+id/txt_year"
+                                    android:layout_marginLeft="5sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="2018"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Genre: "
+                                    android:textColor="@color/welcome_color"
+                                    android:textSize="18sp"/>
+                                <TextView
+                                    android:id="@+id/txt_genre"
+                                    android:layout_marginLeft="5sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="n/A"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Length: "
+                                    android:textColor="@color/welcome_color"
+                                    android:textSize="18sp"/>
+                                <TextView
+                                    android:id="@+id/txt_length"
+                                    android:layout_marginLeft="5sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="60min"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Age: "
+                                    android:textColor="@color/welcome_color"
+                                    android:textSize="18sp"/>
+                                <TextView
+                                    android:id="@+id/txt_age"
+                                    android:layout_marginLeft="5sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="12+"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="3sp"
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Director: "
+                                    android:textColor="@color/welcome_color"
+                                    android:textSize="18sp"/>
+                                <TextView
+                                    android:id="@+id/txt_director"
+                                    android:layout_marginLeft="5sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="n/A"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cast: "
+                                    android:textColor="@color/welcome_color"
+                                    android:textSize="18sp"/>
+                                <TextView
+                                    android:id="@+id/txt_cast"
+                                    android:layout_marginLeft="5sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="n/A"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <View
+                                android:layout_marginTop="5sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1sp"
+                                android:background="@color/light_black"/>
+                            <TextView
+                                android:layout_marginTop="3sp"
+                                android:id="@+id/txt_dec"
+                                android:textSize="18sp"
+                                android:textColor="@color/white"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginTop="5sp"
+                        android:background="@color/light_black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/ly_right"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/image_movie"
+                        android:scaleType="fitXY"
+                        android:layout_width="130sp"
+                        android:layout_height="180sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

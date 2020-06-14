@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".activity.home.SlideFragment">
+
+    <LinearLayout
+        android:id="@+id/lay_label"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginStart="@dimen/size_20dp"
+        android:layout_marginEnd="@dimen/size_20dp">
+
+        <TextView
+            android:id="@+id/section_label"
+            android:text="Code"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textStyle="bold|italic"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_body"
+            android:text="Code"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textSize="15sp"
+            android:layout_marginTop="@dimen/text_size_15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/small_sc_width"
+        android:layout_height="@dimen/small_sc_height"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:src="@drawable/icon"
+        android:layout_marginEnd="@dimen/size_20dp" />
+
+</LinearLayout>

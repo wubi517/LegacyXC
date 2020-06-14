@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="450dp"
+    android:layout_height="170sp"
+    android:background="@drawable/dialog_bg"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Would you like to continue watching?"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="10dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dlg_update_skip_btn"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="No"
+                android:background="@drawable/btn_drawable"/>
+
+           <View
+               android:layout_width="0dp"
+               android:layout_height="0dp"
+               android:layout_weight="1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dlg_update_now_btn"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="Yes"
+                android:background="@drawable/btn_drawable">
+                <requestFocus />
+            </androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

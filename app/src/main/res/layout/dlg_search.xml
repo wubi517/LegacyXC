@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="400dp"
+    android:layout_height="300dp"
+    android:background="@drawable/dialog_bg">
+
+    <LinearLayout
+        android:id="@+id/search_dlg_top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/pkg_dlg_title_bg">
+
+        <EditText
+            android:id="@+id/search_txt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:background="@drawable/round_white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="15dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:hint="Search channel name"
+            android:inputType="textPersonName"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_search_white"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ListView
+            android:id="@+id/search_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="0.5dp"
+            android:divider="@color/gray"
+            android:visibility="visible"/>
+
+        <GridView
+            android:id="@+id/search_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:verticalSpacing="5dp"
+            android:horizontalSpacing="5dp"
+            android:numColumns="3"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

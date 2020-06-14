@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black"
+    android:orientation="vertical">
+<!--    //android:background="@drawable/radial_bg"//-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+    <com.newlegacyxc.epg.EPG
+        android:id="@+id/epg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline11" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+    <RelativeLayout
+        android:id="@+id/ly_surface"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="@id/guideline12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline11"
+        android:focusableInTouchMode="false">
+        <SurfaceView
+            android:id="@+id/surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <SurfaceView
+            android:id="@+id/remote_subtitles_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/trans_parent"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+        <LinearLayout
+            android:id="@+id/def_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/def_image"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sorry, but there is a problem with the broadcast source"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline12"
+        app:layout_constraintBottom_toTopOf="@id/guideline11">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextureView
+                android:id="@+id/ignore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+            <RelativeLayout
+                android:id="@+id/ly_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="8dp"
+                    android:src="@drawable/arrow"
+                    android:tint="@color/white" />
+
+                <View
+                    android:id="@+id/rip_back"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/my_ripple_circle"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:nextFocusRight="@+id/rip_fav" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/current_channel_image"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_marginStart="@dimen/size_16dp"
+                app:layout_constraintStart_toEndOf="@id/spinner"
+                app:layout_constraintTop_toTopOf="@id/ly_back" />
+
+            <TextView
+                android:id="@+id/channel_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="@id/current_channel_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/current_channel_image"
+                app:layout_constraintTop_toTopOf="@id/current_channel_image"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/current_channel_image" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:lineSpacingExtra="2sp"
+                android:textColor="#cccccc"
+                android:textSize="14sp"
+                android:maxLines="3"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/textView7"
+                app:layout_constraintTop_toBottomOf="@id/textView7"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@id/textView4"
+                app:layout_constraintStart_toStartOf="@id/textView4"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="19:30"
+                android:textColor="@color/welcome_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/ly_back"
+                app:layout_constraintTop_toTopOf="@id/ly_back"
+                app:layout_constraintBottom_toBottomOf="@id/ly_back"
+                android:background="@android:color/transparent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/my_ripple_round"
+                app:layout_constraintStart_toStartOf="@id/spinner"
+                app:layout_constraintEnd_toEndOf="@id/spinner"
+                app:layout_constraintTop_toTopOf="@id/spinner"
+                app:layout_constraintBottom_toBottomOf="@id/spinner"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/category_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline1"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

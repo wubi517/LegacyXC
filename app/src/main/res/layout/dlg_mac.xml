@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:background="@drawable/dec_bg"
+    android:gravity="center_horizontal"
+    android:layout_height="150sp">
+    <TextView
+        android:layout_marginBottom="15sp"
+        android:layout_above="@+id/txt_mac"
+        android:text="Your Mac address:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+    <TextView
+        android:id="@+id/txt_mac"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </TextView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/dlg_mac_btn"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:text="OK"
+        android:background="@drawable/btn_drawable"
+        android:layout_marginBottom="15dp"/>
+</RelativeLayout>

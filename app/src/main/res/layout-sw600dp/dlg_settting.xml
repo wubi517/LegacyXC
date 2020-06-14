@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/search_dlg_top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="5sp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/rounded_green">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/search_txt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Settings"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="5sp"
+        android:background="@drawable/rounded_green"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+        <ListView
+            android:id="@+id/setting_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"/>
+    </LinearLayout>
+</LinearLayout>

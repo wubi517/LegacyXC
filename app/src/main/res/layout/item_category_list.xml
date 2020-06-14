@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/main_lay"
+    android:background="@drawable/list_item_draw"
+    android:layout_width="match_parent"
+    android:layout_height="35sp"
+    android:padding="5sp">
+    <TextView
+        android:gravity="center_horizontal"
+        android:id="@+id/categry_list_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+</LinearLayout>

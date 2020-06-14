@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="view_list">
+        <item>list_info</item>
+        <item>list</item>
+    </string-array>
+
+    <string-array name="fav_list">
+        <item>Add to Fav</item>
+        <item>TV Channel</item>
+        <item>EPG</item>
+    </string-array>
+    <string-array name="setting_list">
+        <item>Parental control</item>
+        <item>Reload portal</item>
+        <item>Sorting Method</item>
+        <item>Select Players</item>
+        <!--<item>EPG Offset Time</item>-->
+        <item>Hide Live Categories</item>
+        <item>Hide Vod Categories</item>
+        <item>Hide Series Categories</item>
+<!--        <item>User Account</item>-->
+        <item>VPN</item>
+        <item>Log out</item>
+    </string-array>
+    <string-array name="package_list">
+        <item>Favorite</item>
+        <item>Search</item>
+        <item>Subtitle</item>
+        <item>Audio Track</item>
+        <item>Audio Delay</item>
+        <item>Screen ratio</item>
+        <item>TV Schedule</item>
+    </string-array>
+    <string-array name="package_list1">
+        <item>Add to Fav</item>
+        <item>Subtitle</item>
+        <item>Audio Track</item>
+        <item>Screen ratio</item>
+        <item>Audio Delay</item>
+    </string-array>
+    <string-array name="package_list2">
+        <item>Subtitle</item>
+        <item>Audio Track</item>
+        <item>Screen ratio</item>
+        <item>Audio Delay</item>
+    </string-array>
+
+    <!--VPN-->
+    <string-array name="software_token_entries">
+        <item>Disabled</item>
+        <item>RSA SecurID</item>
+        <item>TOTP</item>
+    </string-array>
+    <string-array name="software_token_values" translatable="false">
+        <item>disabled</item>
+        <item>securid</item>
+        <item>totp</item>
+    </string-array>
+
+    <string-array name="batch_mode_entries">
+        <item>Disabled</item>
+        <item>Prompt for empty fields only</item>
+        <item>Never prompt for credentials</item>
+    </string-array>
+    <string-array name="batch_mode_values" translatable="false">
+        <item>disabled</item>
+        <item>empty_only</item>
+        <item>enabled</item>
+    </string-array>
+
+    <string-array name="reported_os_entries">
+        <item>Android</item>
+        <item>Linux (32-bit)</item>
+        <item>Linux (64-bit)</item>
+        <item>Windows</item>
+        <item>Mac</item>
+        <item>iOS</item>
+    </string-array>
+    <string-array name="reported_os_values" translatable="false">
+        <item>android</item>
+        <item>linux</item>
+        <item>linux-64</item>
+        <item>win</item>
+        <item>mac-intel</item>
+        <item>apple-ios</item>
+    </string-array>
+
+    <string-array name="split_tunnel_mode_entries">
+        <item>Auto</item>
+        <item>On - DNS uses VPN</item>
+        <item>On - DNS uses uplink</item>
+    </string-array>
+    <string-array name="split_tunnel_mode_values" translatable="false">
+        <item>auto</item>
+        <item>on_vpn_dns</item>
+        <item>on_uplink_dns</item>
+    </string-array>
+
+    <string-array name="log_timestamp_entries" translatable="false">
+        <item>@string/timestamp_short</item>
+        <item>@string/timestamp_long</item>
+        <item>@string/timestamp_none</item>
+    </string-array>
+    <string-array name="log_timestamp_values" translatable="false">
+        <item>short</item>
+        <item>long</item>
+        <item>none</item>
+    </string-array>
+
+    <string-array name="connection_states">
+        <item>Unknown</item>
+        <item>Authenticating</item>
+        <item>Prompting for user input</item>
+        <item>Authenticated</item>
+        <item>Connecting</item>
+        <item>Connected</item>
+        <item>Disconnected</item>
+    </string-array>
+
+    <string-array name="faq_text">
+        <item>What is this app used for?</item>
+        <item>OpenConnect is used to access virtual private networks (VPNs) which utilize the Cisco AnyConnect SSL VPN protocol.  A typical use case might involve logging into your workplace remotely to check email after hours.\n\nIf in doubt, check with your I.T. administrator to see if a suitable service is available.</item>
+
+        <item>How do I get started?</item>
+        <item>In most cases, you\'ll just need to create a profile and enter the hostname of the VPN gateway.  The other fields in the profile are all optional and should be left alone unless there is a specific need to change them.\n\nOnce you\'ve set up the profile, select the VPN entry and OpenConnect will attempt to establish a new session.  If this fails, the \"Log\" tab may provide helpful diagnostic information.</item>
+
+        <item>How do I authenticate using an SSL client certificate?</item>
+        <item>Copy your certificate files to Android\'s external storage directory (nominally /sdcard or the Downloads folder), then edit the VPN profile and make the following changes:\n\nP12 or PFX file: select \"User certificate\", pick the file from the list, then touch \"select\".  Leave \"Private key\" blank.\n\nSingle PEM/CRT/CER file: same as above.\n\nSeparate PEM/CRT/CER and KEY files: populate \"User certificate\" with the certificate file, and \"Private key\" with the key file.\n\nWhen finished, delete the certificate files from external storage so they cannot be stolen by other apps.\n\nIf you are generating your own keys (e.g. for use with your ocserv gateway), some basic CA setup instructions are posted [here](http://forum.xda-developers.com/showpost.php?p=52119253&amp;postcount=25).</item>
+
+        <item>Will OpenConnect work with non-AnyConnect VPNs?</item>
+        <item>Unfortunately the software design is tied very closely to the AnyConnect requirements and the libopenconnect interfaces.  Therefore it only works with Cisco AnyConnect and ocserv gateways.</item>
+
+        <item>Will OpenConnect work with Cisco IPsec VPNs running on an ASA?</item>
+        <item>OpenConnect supports SSL VPN (CSTP + DTLS) only.</item>
+
+        <item>How do I import a SecurID software token?</item>
+        <item>If you have an URL that starts with \"com.rsa.securid.iphone://\" or \"http://127.0.0.1/securid/\" in your email, click on it and tell OpenConnect to add it to the desired VPN profile.  If you just have a raw token string then write it to a text file, copy it under /sdcard, click \"Token string\" in the VPN profile editor, then select the filename.\n\nIf you have an \"sdtid\" XML file, copy it to /sdcard and then import it.</item>
+
+        <item>Is it possible to skip all login prompts when connecting?</item>
+        <item>If you have saved your username, password, or other credentials, or if you are using SecurID or certificate authentication, you can try enabling \"Batch Mode\" in the VPN profile to skip the login dialogs.  If you need to change your saved password later or have trouble connecting, just disable batch mode.\n\nThe VPN warning dialog is a security feature built into the Android OS.  If your device is rooted, you can bypass it by installing the [Xposed framework](http://forum.xda-developers.com/xposed/xposed-installer-versions-changelog-t2714053), enabling the OpenConnect module, then rebooting.\n\nDue to the user interaction required by these dialogs, it is not always possible to reliably start up the VPN in the background.  So a \"start-on-boot\" feature is not currently provided.</item>
+
+        <item>How do I improve battery life while the VPN is up?</item>
+        <item>One option is to select \"Pause when asleep\" under Settings.  The downside is that VPN access will be temporarily stopped when the screen is off.  Also, ASA gateways sometimes get annoyed with constant reconnections and may prematurely terminate your session after a few days.\n\nAnother option is to contact your server administrator and request that they disable dead peer detection (DPD), increase the idle timeout to >1hr, and increase the keepalive interval to ~5min or so.</item>
+
+        <item>How do I use OpenConnect with AFWall+?</item>
+        <item>There are a few caveats to keep in mind when using an Android firewall with VPN:\n\n* If you run KitKat, use Android 4.4.2 or higher and AFWall 1.2.8 or higher.  Android 4.4 and 4.4.1 have a serious TCP MSS bug which causes stalled connections and/or poor performance.  AFWall &lt;=1.2.7 does not have the extra logic needed to handle the routing changes in KitKat.\n* Always allow traffic from the VPN app on all interfaces.  In particular, you should whitelist VPN traffic from OpenConnect, as OpenConnect sends DNS requests over the VPN interface every few minutes to help keep the connection from timing out.</item>
+
+        <item>Are any apps incompatible with VPN?</item>
+        <item>Apps which perform their own DNS resolution, such as Firefox, may have issues picking up the latest system DNS settings when connecting to the VPN.  This can be a problem if your system DNS servers are not accessible over the VPN\'s routes, or if you are trying to look up hostnames that do not have public (internet) DNS entries.</item>
+
+        <item>Under what circumstances will OpenConnect request root?</item>
+        <item>There are two root-only features shown under Settings; both are disabled by default.  One setting works around a ROM bug in CM9 which sets incorrect permissions on /dev/tun, preventing VpnService from passing traffic to the tunnel interface; the other setting loads tun.ko on ROMs that neglect to load it by default.\n\nBased on user feedback and testing, future releases may autodetect these conditions.</item>
+
+        <item>How do I send a problem report?</item>
+        <item>Navigate to Log -&gt; (menu) -&gt; Send log file.  Please be sure to furnish a complete, accurate description of the issue you are seeing, as the logs do not always show a smoking gun.</item>
+    </string-array>
+
+</resources>

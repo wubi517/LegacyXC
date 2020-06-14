@@ -1,0 +1,22 @@
+{
+    "status": "success",
+    "msg": "Welcome",
+    "message_on_off": "0",
+    "message_time": "15",
+    "slider_time": "5",
+    "data": "http://peaklabel.eu:8080",
+    "version": "",
+    "appUrl": "",
+    "dual_screen": "1234",
+    "tri_screen": "1234",
+    "four_way_screen": "1234",
+    "ip": "00.00.00.00",
+    "server_type": "Streaminy",
+    "images": [
+        "http://theradioshak.co.uk/peakm/icon.png",
+        "http://theradioshak.co.uk/peakm/mainbg.jpg",
+        "http://theradioshak.co.uk/peakm/loginbg.jpg",
+        "http://theradioshak.co.uk/peakm1/ad.jpg",
+        "http://theradioshak.co.uk/peakm/ad2.jpg"
+    ]
+}

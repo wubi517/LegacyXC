@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/radial_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/icon_plus"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/circle_bg"
+        android:src="@drawable/icons_plus"
+        android:tint="@color/white"
+        android:padding="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/icon_full"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_full"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/circle_bg"
+        android:src="@drawable/icons_full"
+        android:tint="@color/white"
+        android:padding="15dp"
+        android:focusable="true"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_plus"
+        app:layout_constraintEnd_toStartOf="@+id/icon_play"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/icon_plus"
+        app:layout_constraintTop_toTopOf="@+id/icon_plus" />
+
+    <ImageView
+        android:id="@+id/icon_play"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/circle_bg"
+        android:src="@drawable/icons_pause"
+        android:tint="@color/white"
+        android:padding="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_full"
+        app:layout_constraintEnd_toStartOf="@+id/icon_sound"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/icon_full"
+        app:layout_constraintTop_toTopOf="@+id/icon_full" />
+
+    <ImageView
+        android:id="@+id/icon_sound"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/circle_bg"
+        android:src="@drawable/sound"
+        android:tint="@color/white"
+        android:padding="20dp"
+        android:focusable="true"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/icon_play"
+        app:layout_constraintTop_toTopOf="@+id/icon_play" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

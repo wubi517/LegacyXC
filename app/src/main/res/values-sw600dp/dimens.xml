@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="isTablet">true</bool>
+    <dimen name="size_5dp">8sp</dimen>
+    <dimen name="size_10dp">14sp</dimen>
+    <dimen name="size_16dp">20sp</dimen>
+    <dimen name="size_20dp">24sp</dimen>
+    <dimen name="text_size_15sp">20sp</dimen>
+    <dimen name="text_size_12sp">15sp</dimen>
+    <dimen name="mini_sc_width">900dp</dimen>
+    <dimen name="mini_sc_height">60dp</dimen>
+    <dimen name="small_sc_width">320dp</dimen>
+    <dimen name="small_sc_height">180dp</dimen>
+    <dimen name="welcome_icon">80sp</dimen>
+    <integer name="span_count_1">8</integer>
+    <dimen name="movie_width">170dp</dimen>
+    <dimen name="movie_height">250dp</dimen>
+    <dimen name="middle_width">240dp</dimen>
+    <dimen name="middle_height">300dp</dimen>
+    <dimen name="epg_channel_layout_width">350dp</dimen>
+    <dimen name="epg_channel_layout_width1">350dp</dimen>
+    <integer name="num_span">6</integer>
+</resources>

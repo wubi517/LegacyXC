@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:orientation="horizontal"
+        android:focusable="true"
+        android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+    <TextView
+            android:text="17:30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/lb_tv_white"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="NBC's Pro Football Talk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            app:layout_constraintStart_toEndOf="@+id/time"
+            android:layout_marginStart="24dp"
+            app:layout_constraintTop_toTopOf="@+id/time"
+            app:layout_constraintBottom_toBottomOf="@+id/time"
+            android:textColor="@color/lb_tv_white"
+            android:maxLines="1"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
